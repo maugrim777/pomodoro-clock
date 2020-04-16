@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@700&display=swap');
+
+body {
+  font-family: 'Skranji', cursive;
+  margin: 0;
+  padding: 0;
+  background: #59C173;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  user-select:none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container {
+  display:grid;
+  width: 50%;
+  min-width: 300px;
+  margin: auto;
+/*   border: 1px solid black; */
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 40% 30%;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+h1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  padding:15px;
+  margin-top:50px;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+.timer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.break {
+  display: grid;
+  width: 70%;
+  grid-template: 50% 50% / 30% 40% 30%;
+  justify-items: center;
+  align-items: center;
+}
+
+#break-label {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align:center;
+}
+
+.session {
+  display: grid;
+  width: 70%;
+  grid-template: 50% 50% / 30% 40% 30%;
+  justify-items: center;
+  align-items: center;
+}
+
+#session-label {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align:center;
+}
+
+.timer {
+  display: grid;
+/*   width: 70%; */
+  grid-template-rows: 30% 40% 30%;
+  justify-items: center;
+  align-items: center;
+}
+
+.buttons > i {
+  padding: 0 5px;
+/*   font-size: 1.5rem; */
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+#pause {
+  opacity: .3
 }
